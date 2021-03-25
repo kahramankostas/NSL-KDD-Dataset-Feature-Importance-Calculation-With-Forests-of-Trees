@@ -70,18 +70,18 @@ def fi(df,output,number_of_feature):
     imp=[]
     for i,ii in enumerate (importances[indices]):
         imp.append(ii)
-        print(i,ii)
+        #print(i,ii)
         if i==number_of_feature-1:break
     st=[]
     for i,ii in enumerate (std[indices]):
         st.append(ii)
-        print(i,ii)
+        #print(i,ii)
         if i==number_of_feature-1:break
     hd=[]
 
     for i,ii in enumerate (header):
         hd.append(ii)
-        print(i,ii)
+        #print(i,ii)
         if i==number_of_feature-1:break
             
 
@@ -535,12 +535,155 @@ number_of_feature= 45 # selects the first x feature with the highest score in th
 imp,st,hd=fi(train,graph_name,number_of_feature)
 ```
 
+    Feature ranking:
+    1. feature 25 same_srv_rate (0.085419)
+    2. feature 120 flag_SF (0.071513)
+    3. feature 35 dst_host_srv_serror_rate (0.066877)
+    4. feature 34 dst_host_serror_rate (0.066346)
+    5. feature 116 flag_S0 (0.057017)
+    6. feature 21 serror_rate (0.050598)
+    7. feature 22 srv_serror_rate (0.037683)
+    8. feature 30 dst_host_same_srv_rate (0.035117)
+    9. feature 29 dst_host_srv_count (0.034795)
+    10. feature 8 logged_in (0.034671)
+    11. feature 19 count (0.030033)
+    12. feature 32 dst_host_same_src_port_rate (0.026609)
+    13. feature 38 protocol_type_icmp (0.024968)
+    14. feature 31 dst_host_diff_srv_rate (0.024948)
+    15. feature 28 dst_host_count (0.024469)
+    16. feature 1 src_bytes (0.023991)
+    17. feature 33 dst_host_srv_diff_host_rate (0.023319)
+    18. feature 26 diff_srv_rate (0.022917)
+    19. feature 36 dst_host_rerror_rate (0.022167)
+    20. feature 90 service_private (0.021526)
+    21. feature 55 service_eco_i (0.019490)
+    22. feature 65 service_http (0.018549)
+    23. feature 56 service_ecr_i (0.017648)
+    24. feature 23 rerror_rate (0.015793)
+    25. feature 39 protocol_type_tcp (0.013534)
+    26. feature 37 dst_host_srv_rerror_rate (0.013499)
+    27. feature 115 flag_RSTR (0.013110)
+    28. feature 20 srv_count (0.012429)
+    29. feature 24 srv_rerror_rate (0.011625)
+    30. feature 4 wrong_fragment (0.010463)
+    31. feature 112 flag_REJ (0.008018)
+    32. feature 40 protocol_type_udp (0.007974)
+    33. feature 27 srv_diff_host_rate (0.007426)
+    34. feature 85 service_other (0.006307)
+    35. feature 53 service_domain_u (0.006124)
+    36. feature 6 hot (0.005641)
+    37. feature 2 dst_bytes (0.005231)
+    38. feature 9 num_compromised (0.004339)
+    39. feature 61 service_ftp_data (0.002761)
+    40. feature 0 duration (0.002621)
+    41. feature 95 service_smtp (0.001622)
+    42. feature 121 flag_SH (0.001554)
+    43. feature 113 flag_RSTO (0.001408)
+    44. feature 18 is_guest_login (0.000873)
+    45. feature 60 service_ftp (0.000829)
+    46. feature 106 service_urp_i (0.000693)
+    47. feature 41 service_IRC (0.000635)
+    48. feature 101 service_telnet (0.000587)
+    49. feature 117 flag_S1 (0.000492)
+    50. feature 114 flag_RSTOS0 (0.000449)
+    51. feature 12 num_root (0.000361)
+    52. feature 7 num_failed_logins (0.000253)
+    53. feature 59 service_finger (0.000197)
+    54. feature 10 root_shell (0.000194)
+    55. feature 84 service_ntp_u (0.000169)
+    56. feature 111 flag_OTH (0.000152)
+    57. feature 3 land (0.000138)
+    58. feature 13 num_file_creations (0.000132)
+    59. feature 45 service_auth (0.000130)
+    60. feature 62 service_gopher (0.000097)
+    61. feature 104 service_time (0.000087)
+    62. feature 15 num_access_files (0.000085)
+    63. feature 69 service_imap4 (0.000083)
+    64. feature 107 service_uucp (0.000075)
+    65. feature 43 service_Z39_50 (0.000071)
+    66. feature 52 service_domain (0.000070)
+    67. feature 42 service_X11 (0.000068)
+    68. feature 14 num_shells (0.000065)
+    69. feature 83 service_nntp (0.000049)
+    70. feature 97 service_ssh (0.000049)
+    71. feature 118 flag_S2 (0.000048)
+    72. feature 110 service_whois (0.000040)
+    73. feature 46 service_bgp (0.000040)
+    74. feature 70 service_iso_tsap (0.000040)
+    75. feature 86 service_pm_dump (0.000039)
+    76. feature 88 service_pop_3 (0.000034)
+    77. feature 75 service_login (0.000034)
+    78. feature 11 su_attempted (0.000032)
+    79. feature 50 service_daytime (0.000027)
+    80. feature 103 service_tim_i (0.000025)
+    81. feature 67 service_http_443 (0.000024)
+    82. feature 119 flag_S3 (0.000024)
+    83. feature 82 service_nnsp (0.000024)
+    84. feature 51 service_discard (0.000023)
+    85. feature 87 service_pop_2 (0.000022)
+    86. feature 47 service_courier (0.000018)
+    87. feature 5 urgent (0.000017)
+    88. feature 108 service_uucp_path (0.000016)
+    89. feature 54 service_echo (0.000015)
+    90. feature 74 service_link (0.000015)
+    91. feature 49 service_ctf (0.000014)
+    92. feature 77 service_name (0.000014)
+    93. feature 64 service_hostnames (0.000013)
+    94. feature 76 service_mtp (0.000012)
+    95. feature 57 service_efs (0.000012)
+    96. feature 109 service_vmnet (0.000011)
+    97. feature 100 service_systat (0.000011)
+    98. feature 94 service_shell (0.000010)
+    99. feature 58 service_exec (0.000010)
+    100. feature 105 service_urh_i (0.000010)
+    101. feature 102 service_tftp_u (0.000009)
+    102. feature 73 service_ldap (0.000009)
+    103. feature 91 service_red_i (0.000009)
+    104. feature 99 service_supdup (0.000008)
+    105. feature 81 service_netstat (0.000008)
+    106. feature 98 service_sunrpc (0.000007)
+    107. feature 92 service_remote_job (0.000006)
+    108. feature 93 service_rje (0.000006)
+    109. feature 48 service_csnet_ns (0.000006)
+    110. feature 80 service_netbios_ssn (0.000006)
+    111. feature 96 service_sql_net (0.000005)
+    112. feature 71 service_klogin (0.000004)
+    113. feature 89 service_printer (0.000004)
+    114. feature 78 service_netbios_dgm (0.000003)
+    115. feature 79 service_netbios_ns (0.000002)
+    116. feature 63 service_harvest (0.000001)
+    117. feature 72 service_kshell (0.000001)
+    118. feature 68 service_http_8001 (0.000001)
+    119. feature 44 service_aol (0.000001)
+    120. feature 17 is_host_login (0.000000)
+    121. feature 66 service_http_2784 (0.000000)
+    122. feature 16 num_outbound_cmds (0.000000)
+    
+
+
+![png](output_16_1.png)
+
+
+    
+    
+    
+    
+    
+
+
+![png](output_16_3.png)
+
+
+    
+    
+    
+    
+    
+
 # List of top 45 features
 
 
 ```python
-
-
 print ('%-5s %-25s %-25s %-25s' %("No","Importance Score","Standard Deviation","Feature Name"))
 print ('%-5s %-25s %-25s %-25s' %("__","________________","__________________","____________"))
 for i in range(len(imp)):
